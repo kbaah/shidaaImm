@@ -80,8 +80,8 @@ export default function Home() {
       </main>
 
       <footer className="footer">
-        <a href="mailto:daniel@shidaaconsults.com" target="_blank" rel="noopener noreferrer">
-          Contact us: daniel@shidaaconsults.com | +1-647-568-5095
+        <a href="mailto:daniel@shidaaimmigration.com" target="_blank" rel="noopener noreferrer">
+          Contact us: daniel@shidaaimmigration.com | +1-647-568-5095
         </a>
       </footer>
 
@@ -137,10 +137,10 @@ export default function Home() {
 
         .grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr); /* Two columns */
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
           grid-gap: 2rem;
           justify-content: center;
-          padding: 0 35rem;
+          padding: 0 2rem;
         }
 
         .card {
@@ -177,6 +177,14 @@ export default function Home() {
         .footer a {
           text-decoration: none;
           color: inherit;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+          .grid {
+            grid-template-columns: 1fr; /* Display a single column on smaller screens */
+            padding: 0 1rem;
+          }
         }
       `}</style>
     </div>
